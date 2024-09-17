@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ producto, onAgregarAlCarrito }) => {
+  const navigate = useNavigate();
   return (
+    
     <div className="producto-card">
       <img 
         src={producto.imagen} 
@@ -15,6 +18,12 @@ const ProductCard = ({ producto, onAgregarAlCarrito }) => {
         className="boton-agregar"
       >
         Agregar al carrito
+      </button>
+      <button
+        onClick={() => navigate(`/producto/${producto.id}`)}
+        className="boton"
+      >
+        Ver Mas
       </button>
     </div>
   );
