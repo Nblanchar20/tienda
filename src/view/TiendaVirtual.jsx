@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ProductCard from '../Components/ProductCard'
 
 
-
-const TiendaVirtual = ({ productos, agregarAlCarrito, vaciarAlCarrito, eliminarDelCarrito, carrito }) => {
+const TiendaVirtual = ({ productos, carrito, agregarAlCarrito, vaciarAlCarrito, eliminarDelCarrito }) => {
 
     const [busqueda, setBusqueda] = useState('');
 
