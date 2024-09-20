@@ -14,17 +14,18 @@ const ProductCard = ({ producto, onAgregarAlCarrito }) => {
       <h2 className="producto-nombre">{producto.nombre}</h2>
       <p className="producto-precio">${producto.precio}</p>
       <button
+        onClick={() => navigate(`/producto/${producto.id}`)}
+        className="boton-agregar"
+      >
+        Ver Mas
+      </button>
+      <button
         onClick={() => onAgregarAlCarrito(producto)}
         className="boton-agregar"
       >
         Agregar al carrito
       </button>
-      <button
-        onClick={() => navigate(`/producto/${producto.id}`)}
-        className="boton"
-      >
-        Ver Mas
-      </button>
+      
     </div>
   );
 };
